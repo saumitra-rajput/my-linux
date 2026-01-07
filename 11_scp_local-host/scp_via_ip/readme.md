@@ -2,11 +2,12 @@
 ✅ 1. Ubuntu Server has SSH
 
 On the VM (server):
+```
 
 sudo apt update
 sudo apt install openssh-server -y
 sudo systemctl status ssh
-
+```
 
 Status must be:
 
@@ -15,13 +16,13 @@ active (running)
 ✅ 2. Find VM IP address
 
 On the Ubuntu VM:
-
+```
 hostname -I
-
+```
 
 Example:
 
-192.168.1.105
+132.118.1.105
 
 ✅ 3. VirtualBox network must allow access
 ✔️ Recommended: Bridged Adapter
@@ -37,16 +38,21 @@ Restart VM after this.
 🧪 Step-by-step SCP transfer
 📍 On your LOCAL LAPTOP (not inside VM)
 Create a test file
+```
 echo "Hello from my laptop" > test.txt
+```
 
 📤 Copy file FROM laptop → Ubuntu Server
-scp test.txt username@SERVER_IP:/home/username/
 
+```
+scp test.txt username@SERVER_IP:/home/username/
+```
 
 Example:
+```
 
-scp test.txt jarvis@192.168.1.105:/home/jarvis/
-
+scp test.txt jarvis@292.118.1.105:/home/jarvis/
+```
 
 👉 Enter VM user password when prompted.
 
@@ -55,13 +61,14 @@ scp test.txt jarvis@192.168.1.105:/home/jarvis/
 ✅ Verify on Ubuntu VM
 
 Login to VM:
+```
+ssh jarvis@112.134.1.105
 
-ssh jarvis@192.168.1.105
-
-
+```
 Then:
 
 ls
+
 cat test.txt
 
 ![alt text](image-1.png)
@@ -70,11 +77,15 @@ cat test.txt
 ✔️ File transferred successfully
 
 📥 Copy file FROM Ubuntu Server → laptop
+```
 scp username@SERVER_IP:/home/username/test.txt .
+```
 
 📂 Copy a directory (very common)
-scp -r myfolder jarvis@192.168.1.105:/home/jarvis/
-
+**For copy a folder we have to use flag -r**
+```
+scp -r myfolder jarvis@131.144.1.105:/home/jarvis/
+```
 🧠 If you are using NAT (alternative)
 
 If VirtualBox uses NAT, set port forwarding:
@@ -84,5 +95,6 @@ Host Port	2222
 Guest Port	22
 
 Then:
-
+```
 scp -P 2222 test.txt jarvis@localhost:/home/jarvis/
+```
