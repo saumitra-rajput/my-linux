@@ -95,7 +95,7 @@ su friday
 ```
 ---
 
-### `sudo groupadd name`
+### `sudo groupadd name` Adding users to the group
 To create the Group
 
 Example:
@@ -103,6 +103,20 @@ Example:
 sudo groupadd devops
 ```
 
+### `sudo usermod -aG group user`
+To modify user to add in the Group 
+
+Using flag -a Append, G Group( -aG )
+
+
+Example:
+```
+sudo usermod -aG testers monica
+```
+![alt text](image-2.png)
+
+## outcome
+![alt text](image-3.png)
 ### `cat /etc/group`
 To check the group name
 
