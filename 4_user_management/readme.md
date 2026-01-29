@@ -130,8 +130,10 @@ To add multiple user in the group.
 It will remove the old users.
 Add new users list in the group**
 Example:
+
+> make sure there is no gap when entering multi user no space- test1,test2,test3
 ```
-sudo gpasswd -M friday, monica devops
+sudo gpasswd -M friday,monica devops
 
 ```
 
