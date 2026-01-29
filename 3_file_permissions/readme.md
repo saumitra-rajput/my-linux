@@ -40,7 +40,7 @@ Change owner:
 sudo chown user:group file.txt
 
 ```
-
+![alt text](image-5.png)
 
 ### `umask`
 User File Creation Mode Mask
@@ -63,3 +63,5 @@ Example:
 ```
 sudo chgrp devops test.txt
 ```
+
+![alt text](image-4.png)
