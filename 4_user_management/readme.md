@@ -95,7 +95,7 @@ su friday
 ```
 ---
 
-### `sudo groupadd name` Adding users to the group
+### `sudo groupadd name` creating group
 To create the Group
 
 Example:
