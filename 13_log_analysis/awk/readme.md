@@ -24,3 +24,9 @@
 ![alt text](image-9.png)
 
 ![alt text](image-10.png)
+
+
+---
+`awk '/Feb/ {count++} END {print"Count of Feb in app file is:"", count}' app.log`
+
+![alt text]({F555491B-0F9A-488D-8440-74CC6BE90988}.png)
