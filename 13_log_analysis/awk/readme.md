@@ -4,8 +4,9 @@
 
 
 **Simple format**
+`awk 'commadn' filename`
 ![alt text](image-1.png)
-
+`awk '{print}' app.log`
 ![alt text](image-2.png)
 
 **Appyling filters**
