@@ -4,6 +4,13 @@ Short explanations of commonly used Linux networking and troubleshooting command
 
 ---
 
+## my public IP
+
+
+```
+curl ifconfig.me
+```
+
 ## 1️⃣ ping
 Checks if a host is reachable and measures latency.
 
