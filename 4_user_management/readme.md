@@ -7,19 +7,17 @@ Displays current logged-in user.
 
 ### `id`
 Shows user/group identity.
-
 ### `useradd`
-Creates a user account only. Does NOT create a home directory by default. Home directory like /home/username will not exist
-Useful for system users or service accounts
 
-User exists
+Creates a user account.
 
-No personal files, no .bashrc, .profile, etc.
+By default, home directory behavior depends on the system configuration. On some systems, `useradd` does not create the home directory unless `-m` is used. On others, the default settings may create it automatically.
 
-Example
+Useful for creating regular users, system users, or service accounts depending on the options used.
+
+Example:
 ```
 sudo useradd newuser
-
 ```
 ### `useradd -m username`
 
@@ -36,8 +34,14 @@ Example
 sudo useradd -m newuser
 ```
 
+### `useradd -M username` 
 
+Create user with no Home directory.
 
+example
+`
+sudo useradd -M jarvis
+`
 
 ### `userdel -r username`
 Deletes the user and their home directory
@@ -46,7 +50,6 @@ Example:
 ```
 userdel -r username
 ```
-
 
 ### `userdel`
 Deletes the user only (home directory stays)
