@@ -10,9 +10,11 @@ Your task is to grant executable permissions to the /tmp/xfusioncorp.sh script o
 
 ## Commands Used
 
-ssh into the server/ cd into the path check the file permission/ added executeable permission to all users
-- ![alt text](image.png)
+ssh into the server/ cd into the path check the file permission chmod 755/ added executeable permission to all users
+- ![alt text](image-1.png)
 
 ## What I Learned
 
 ## Notes
+
+![alt text](image.png)
