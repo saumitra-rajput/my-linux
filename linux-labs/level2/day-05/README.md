@@ -11,6 +11,17 @@ Set up a password-less authentication from user thor on jump host to all app ser
 
 ## Commands Used
 
+```
+
+ssh-keygen
+
+ssh-copy-id tony@stapp01 yes password 
+then 
+try ssh access
+ssh tony@stapp01
+BOom
+
+```
 
 ![alt text](image.png)
 ## What I Learned
